@@ -13,12 +13,27 @@ class StatefulGreeting extends React.Component {
             buttonText: "Exit",
         };
     }
+    // define new method handleClick
+    handleClick() {
+        this.setState({
+            introduction: "Goodbye!",
+            buttonText: "Enter",
+        }, ()=>{
+            // callback function, this code will run after setState completes
+            console.log("new state", this.state.introduction);
+            console.log("new state", this.state.buttonText);
+        });
+        console.log(this.state.introduction);
+        console.log(this.state.buttonText);
+
+    }
 
     render() {
         return (
             <div>
                 <h1>{this.state.introduction}{this.props.name}, {this.props.greeting}</h1>
-                <button>{this.state.buttonText}</button>
+                {/* add onClick attribute */}
+                <button onClick={() => this.handleClick()}>{this.state.buttonText}</button>
             </div>
         )
     }
