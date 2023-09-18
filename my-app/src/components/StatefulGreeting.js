@@ -11,21 +11,29 @@ class StatefulGreeting extends React.Component {
         this.state = {
             introduction: "Hello!",
             buttonText: "Exit",
+            count: 0,
         };
     }
     // define new method handleClick
     handleClick() {
-        this.setState({
-            introduction: "Goodbye!",
-            buttonText: "Enter",
-        }, ()=>{
-            // callback function, this code will run after setState completes
-            console.log("new state", this.state.introduction);
-            console.log("new state", this.state.buttonText);
+        this.setState((prevState, prevProps) => {
+            console.log("Previous State:", prevState);
+            console.log("Previous Props:", prevProps);
+            return {
+                introduction: prevState.introduction === "Hello!" ? "Goodbye" : "Hello!",
+                buttonText: prevState.buttonText === "Exit" ? "Enter" : "Exit",
+            };
         });
-        console.log(this.state.introduction);
-        console.log(this.state.buttonText);
+    }
 
+    increment() {
+        this.setState((prevState, prevProps) => {
+            console.log("Previous State:", prevState);
+            console.log("Previous Props:", prevProps);
+            return {
+                count: prevState.count + 1
+            };
+        });
     }
 
     render() {
@@ -34,8 +42,11 @@ class StatefulGreeting extends React.Component {
                 <h1>{this.state.introduction}{this.props.name}, {this.props.greeting}</h1>
                 {/* add onClick attribute */}
                 <button onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                <button onClick={() => this.increment()}>Increment</button>
+                <p>You've clicked {this.state.count} times</p>
+
             </div>
-        )
+        );
     }
 
 }
