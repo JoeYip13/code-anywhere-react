@@ -9,6 +9,7 @@ import EventBinding from './components/EventBinding';
 import ConditonalRenderingClass from './components/ConditonalRenderingClass';
 import ConditonalRenderingFunctional from './components/ConditonalRenderingFunctional';
 import NestingComponents from './components/NestingComponents';
+import MethodsAsPropsParent from './components/MethodsAsPropsParent';
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
       <EventsFunctional />
       <EventBinding /> 
       <ConditonalRenderingClass />
-      <ConditonalRenderingFunctional connected={false}/>*/}
-      <NestingComponents />
+      <ConditonalRenderingFunctional connected={false}/>
+      <NestingComponents />*/}
+      <MethodsAsPropsParent />
     </div>
   );
 }
