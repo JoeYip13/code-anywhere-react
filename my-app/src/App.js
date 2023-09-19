@@ -6,6 +6,8 @@ import StatefulGreeting from './components/StatefulGreeting';
 import EventsClass from './components/EventsClass';
 import EventsFunctional from './components/EventsFunctional';
 import EventBinding from './components/EventBinding';
+import ConditonalRenderingClass from './components/ConditonalRenderingClass';
+import ConditonalRenderingFunctional from './components/ConditonalRenderingFunctional';
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
       <FunctionalGreetingWithProps greeting="nice to meet you!" name="Mike" age="32" />
       <StatefulGreeting greeting="I am a stateful class component!" name="Joe" />
       <EventsClass />
-      <EventsFunctional /> */}
-      <EventBinding />
+      <EventsFunctional />
+      <EventBinding /> */}
+      <ConditonalRenderingClass />
+      <ConditonalRenderingFunctional connected={false}/>
     </div>
   );
 }
