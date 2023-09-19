@@ -8,6 +8,7 @@ import EventsFunctional from './components/EventsFunctional';
 import EventBinding from './components/EventBinding';
 import ConditonalRenderingClass from './components/ConditonalRenderingClass';
 import ConditonalRenderingFunctional from './components/ConditonalRenderingFunctional';
+import NestingComponents from './components/NestingComponents';
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
       <StatefulGreeting greeting="I am a stateful class component!" name="Joe" />
       <EventsClass />
       <EventsFunctional />
-      <EventBinding /> */}
+      <EventBinding /> 
       <ConditonalRenderingClass />
-      <ConditonalRenderingFunctional connected={false}/>
+      <ConditonalRenderingFunctional connected={false}/>*/}
+      <NestingComponents />
     </div>
   );
 }
