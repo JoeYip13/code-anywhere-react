@@ -11,6 +11,7 @@ import ConditonalRenderingFunctional from './components/ConditonalRenderingFunct
 import NestingComponents from './components/NestingComponents';
 import MethodsAsPropsParent from './components/MethodsAsPropsParent';
 import RenderingLists from './components/RenderingLists';
+import LifeCyclesCDM from './components/LifeCyclesCDM';
 
 function App() {
   return (
@@ -24,8 +25,9 @@ function App() {
       <ConditonalRenderingClass />
       <ConditonalRenderingFunctional connected={false}/>
       <NestingComponents />
-      <MethodsAsPropsParent />*/}
-      <RenderingLists />
+      <MethodsAsPropsParent />
+      <RenderingLists />*/}
+      <LifeCyclesCDM />
     </div>
   );
 }
