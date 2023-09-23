@@ -10,6 +10,7 @@ import ConditonalRenderingClass from './components/ConditonalRenderingClass';
 import ConditonalRenderingFunctional from './components/ConditonalRenderingFunctional';
 import NestingComponents from './components/NestingComponents';
 import MethodsAsPropsParent from './components/MethodsAsPropsParent';
+import RenderingLists from './components/RenderingLists';
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
       <EventBinding /> 
       <ConditonalRenderingClass />
       <ConditonalRenderingFunctional connected={false}/>
-      <NestingComponents />*/}
-      <MethodsAsPropsParent />
+      <NestingComponents />
+      <MethodsAsPropsParent />*/}
+      <RenderingLists />
     </div>
   );
 }
