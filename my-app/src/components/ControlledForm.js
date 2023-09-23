@@ -8,6 +8,14 @@ export class ControlledForm extends Component {
         name: ''
       }
     }
+    handleNameChange = (event) => {
+        // let newValue = event.target.value
+        // console.log(newValue)
+        // Simplified 
+        this.setState({
+            name: event.target.value
+        })
+    }
     render() {
         return (
         <div>
@@ -15,6 +23,7 @@ export class ControlledForm extends Component {
                 <label htmlFor="id-name">Your Name:</label>
                 <input 
                     value={this.state.name}
+                    onChange={this.handleNameChange}
                     id="id-name"
                     name="name"
                     type="text"
