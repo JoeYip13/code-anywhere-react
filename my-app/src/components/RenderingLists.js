@@ -32,13 +32,15 @@ export default function RenderingLists() {
     <div>
         {/* .map method  */}
         {bookList.map(book => {
-            return <h2>{book}</h2>
+            // add key to outer most element
+            return <h2 key={book}>{book}</h2>
         })}
         <hr/>
         {
             books.map(book => {
                 return (
-                    <div>
+                    // add key to outer most element that will be repeated
+                    <div key={book.title}>
                         <h5>{book.title}</h5>
                         <p>{book.author}</p>
                         <p>{book.pages}</p>
@@ -50,7 +52,8 @@ export default function RenderingLists() {
         {/* rendering React components by passing array objects as props */}
         {
             books.map(book => {
-                return <Book book={book} />
+                // add key to the outer most element that will be repeated
+                return <Book key={book.title} book={book} />
             })
         }
     </div>
