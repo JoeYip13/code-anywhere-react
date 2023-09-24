@@ -21,8 +21,15 @@ function UseEffectCounter() {
     useEffect(() => {
         console.log('Creating timer');
         const interval = setInterval(() => {
+            console.log('Interval executed')
             setTime(time => time + 1)
         }, 1000);
+        // this return mimics the componentWillUnmout in class based components
+        return () => {
+            console.log('Cleaning up!')
+            // clean up function passing the clearInterval function the interval we wish to clear i.e interval
+            clearInterval(interval);
+        }
         // passing a empty array as a second paramenter only runs the useEffect method once
     }, []);
     return (
